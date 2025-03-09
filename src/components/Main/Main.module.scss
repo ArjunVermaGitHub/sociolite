@@ -1,0 +1,7 @@
+.formContainer {
+    // align-items: center; // Vertically centers the items
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; // Adds space between the input and button
+    justify-content: flex-start; // Aligns items to the left
+  }
