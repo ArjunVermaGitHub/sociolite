@@ -5,10 +5,10 @@ import style from "../../styles/float.module.scss"
 
 const Header = () => {
   return (
-    <header className={styles.header}>
-      <Logo />
+    <div className={styles.header}>
+      <Logo className='test'/>
       <Sociolite />
-    </header>
+    </div>
   );
 };
 

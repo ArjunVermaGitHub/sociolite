@@ -1,6 +1,7 @@
 import styles from "./Main.module.scss";
 import { useState } from "react";
 import axios from 'axios';
+import Image from "next/image";
 
 const Main = () => {
   const [email, setEmail] = useState("");
@@ -166,10 +167,11 @@ const Main = () => {
 
   return (
     <main className="section-title">
-      <h1 style={{ marginLeft: "60px" }}>LAUNCHING SOON!</h1>
-      <h1 style={{ marginLeft: "60px" }}>STAY TUNED</h1>
-      <p className="green" style={{ marginLeft: "65px" }}>
-        Drop your email for immediate updates:
+      <h1 >LAUNCHING SOON!</h1>
+      <h1 >STAY TUNED</h1>
+      <p className="green" style={{ marginLeft: "5px" }}>
+        Drop your email for immediate updates.
+        We respect your privacy. No spam, just the most important updates
       </p>
       <form onSubmit={handleSubmit}>
         <div className={styles.formContainer}>
@@ -181,29 +183,40 @@ const Main = () => {
           style={{
             // width: "540px",
             height: "54px",
-            marginLeft: "60px",
+            // marginLeft: "60px",
             marginBottom: "20px",
             paddingLeft:"20px",
           }}
         />
-        <button
-          type="submit"
-          style={{
-            marginLeft: "10px",
-            height: "54px",
-            padding: "0 20px",
-            backgroundColor: "#538098",
-            color: "#FFF",
-            border: "none",
-            cursor: "pointer",
-          }}
-        >
-          Submit
-        </button>
+<button
+  className={styles["primary-button"]}
+  type="submit"
+  onMouseDown={(e) => (e.target.style.transform = "scale(0.95)")}
+  onMouseUp={(e) => (e.target.style.transform = "scale(1)")}
+  onMouseEnter={(e) => (e.target.style.backgroundColor = "#456b7c")}
+  onMouseLeave={(e) => (e.target.style.backgroundColor = "#538098")}
+>
+  Submit
+</button>
+
         </div>
       </form>
-      {error && <p style={{ marginLeft: "65px", color: "#c10202" }}>{error}</p>}
-      {message && <p style={{ marginLeft: "65px" }}>{message}</p>}
+      {error && <p style={{ marginLeft: "5px", color: "#c10202" }}>{error}</p>}
+      {message && <p style={{ marginLeft: "5px" }}>{message}</p>}
+
+      <div className={styles["social-links"]}>
+        <p className="">Join our Discord Community:</p> 
+        <button className='button-icon'>
+        <a href='https://discord.gg/tCZskSz3nh' target="_blank">
+          <Image 
+            src='/static/discord-icon.svg'
+            width={40} 
+            height={40}
+          />
+        </a>
+        </button>
+       
+      </div>
     </main>
   );
 };

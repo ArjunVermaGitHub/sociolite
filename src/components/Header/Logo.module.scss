@@ -1,0 +1,22 @@
+$breakpoints: (
+    'xs': 480px,   // Extra small devices
+    'sm': 768px,   // Small devices (tablets)
+    'md': 1024px,  // Medium devices (laptops)
+    'lg': 1280px,  // Large devices (desktops)
+    'xl': 1440px   // Extra large devices
+  );
+
+  @mixin respond-to($size) {
+    @media (max-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  }
+
+
+
+.logo{
+    @include respond-to('sm') {
+        display: none;
+    }
+
+}

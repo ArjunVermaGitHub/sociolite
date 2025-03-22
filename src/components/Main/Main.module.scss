@@ -1,7 +1,42 @@
 .formContainer {
     // align-items: center; // Vertically centers the items
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     gap: 10px; // Adds space between the input and button
     justify-content: flex-start; // Aligns items to the left
+    width: 100%;
   }
+  .social-links{
+    align-items: center; /* Centers items vertically */
+    color: green; /* Keeps text color consistent */
+    display: flex;
+    gap: 8px; /* Adds space between the icon and text */
+    text-decoration: none;
+  }
+
+  .primary-button {
+  margin-left: 10px;
+  height: 54px;
+  padding: 0 24px;
+  background: linear-gradient(135deg, #538098, #3b6978);
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+  font-family: "Slabien", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.primary-button:hover {
+  background: linear-gradient(135deg, #456b7c, #2f5664);
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.primary-button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}

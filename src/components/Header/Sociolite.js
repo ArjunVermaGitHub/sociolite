@@ -6,11 +6,9 @@ import React from 'react'
 const Sociolite = () => {
   return (
     <div className='sociolite'>
-      
-    <MySvg
-    className='sociolite-svg'
-    />
-
+      <MySvg
+        style={{width:"100%"}}
+      />
   </div>
   )
 }

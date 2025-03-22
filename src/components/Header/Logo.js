@@ -6,18 +6,18 @@ import styles from './Logo.module.scss';
 const Header = () => {
 
   return (
-    <header className={styles.header} >
+    // <header className={styles.header} >
       <div className={styles.topLeftImage}>
         <Image 
-        className='image-fade'
+        className={styles['logo']}
           src="/static/logo.png" 
           alt="Logo" 
-          width={200} 
-          height={200} 
+            width={200} 
+            height={200} 
         />
       </div>
      
-    </header>
+    // </header>
   );
 };
 
