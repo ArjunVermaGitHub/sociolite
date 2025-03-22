@@ -1,0 +1,18 @@
+# *
+User-agent: *
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+# *
+User-agent: *
+Disallow: /admin
+Disallow: /private
+
+# Host
+Host: https://sociolite.co
+
+# Sitemaps
+Sitemap: https://sociolite.co/sitemap.xml
