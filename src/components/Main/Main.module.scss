@@ -30,10 +30,10 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.primary-button:hover {
+.primary-button:hover, .button-active:hover {
   background: linear-gradient(135deg, #456b7c, #2f5664);
-  transform: translateY(-2px);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  // transform: translateY(-2px);
+  // box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .primary-button:active {

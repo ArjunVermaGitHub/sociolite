@@ -166,7 +166,7 @@ const Main = () => {
   
 
   return (
-    <main className="section-title">
+    <main className={"section-title"}>
       <h1 >LAUNCHING SOON!</h1>
       <h1 >STAY TUNED</h1>
       <p className="green" style={{ marginLeft: "5px" }}>
@@ -206,15 +206,15 @@ const Main = () => {
 
       <div className={styles["social-links"]}>
         <p className="">Join our Discord Community:</p> 
+          <a href='https://discord.gg/tCZskSz3nh' target="_blank">
         <button className='button-icon'>
-        <a href='https://discord.gg/tCZskSz3nh' target="_blank">
-          <Image 
-            src='/static/discord-icon.svg'
-            width={40} 
-            height={40}
-          />
-        </a>
+            <Image 
+              src='/static/discord-icon.svg'
+              width={40} 
+              height={40}
+            />
         </button>
+          </a>
        
       </div>
     </main>

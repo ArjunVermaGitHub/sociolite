@@ -9,7 +9,7 @@ export default function Home() {
     <div className='home'>
       <Header/>
         <div className='home-desc green'>
-          Tools & Games for Social Growth.
+          <h1 style={{display:"none"}}>Welcome to Sociolite</h1> <h2>Tools & Games for Social Growth.</h2>
           <p className=''>Struggling to speak up? Stuck in awkward moments? Unsure how to navigate social situations? Sociolite helps you ditch the cringe and talk with confidence—through games, smart tools, and real-world practice. 
             No fluff, just social skills that actually work.</p>
         </div>
