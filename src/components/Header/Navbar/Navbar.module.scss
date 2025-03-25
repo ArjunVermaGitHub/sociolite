@@ -1,0 +1,218 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: padding 0.3s ease;
+  z-index: 1000;
+}
+
+.navContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Expanding Background for Logo + Hamburger */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #76adc0;
+  border-radius: 41px;
+  padding: 8px;
+  min-width: fit-content;
+  transition: all 0.3s ease;
+}
+
+/* Shrinking when scrolled */
+.scrolled .logoContainer {
+  // padding: 4px;
+}
+
+/* Expanding when menu is open */
+.isOpen .logoContainer {
+  // padding: 5px 20px;
+}
+
+/* Logo */
+.logo {
+  img {
+    height: auto;
+  }
+}
+
+/* Navbar Links */
+.navLinks {
+  margin-left: auto;
+  list-style: none;
+  display: flex;
+  gap: 70px;
+
+  li {
+    display: inline;
+  }
+
+  a {
+    color: #625593;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #f4a261;
+    }
+  }
+}
+
+/* Social Icons */
+.socialIcons {
+  margin-left: 50px;
+  display: flex;
+  gap: 15px;
+  
+  a {
+    color: #625593;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #f4a261;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+/* Hide social icons on scroll */
+.hidden {
+  display: none;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #fff8e7;
+  cursor: pointer;
+  margin-left: 15px; /* Ensures spacing inside the expanding background */
+  z-index: 1100;
+}
+
+/* Scroll Effect */
+@media (min-width: 1025px) {
+  .scrolled .navLinks {
+    display: none;
+  }
+
+  .scrolled .hamburger {
+    display: block;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 1024px) {
+  .navLinks {
+    display: none;
+  }
+
+  .socialIcons {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Mobile Menu */
+/* Mobile Menu */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  width: 80%;
+  max-width: 400px;
+  background: #76adc0;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+
+  /* When the menu is open */
+  .isOpen & {
+    transform: translateX(-50%) translateY(20px);
+    opacity: 1;
+  }
+
+  a {
+    color: #625593;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #4c3b87;
+    }
+  }
+
+  /* Mobile Social Icons */
+  .mobileSocialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+
+    a {
+      color: #625593;
+      font-size: 24px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #4c3b87;
+      }
+
+      /* Ensure SVG icons match the text color */
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+      }
+    }
+  }
+}
+
+
+/* Mobile Social Icons */
+.mobileSocialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+
+  a {
+    color: #fff8e7;
+    font-size: 24px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

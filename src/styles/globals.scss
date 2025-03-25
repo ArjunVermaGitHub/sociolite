@@ -99,6 +99,13 @@
     line-height: 1.6;
   }
 
+  link[rel="icon"] {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+  
+
   .home{
     background-color: #ffcf56;
     display: flex;
@@ -238,50 +245,50 @@
     
     }
   }
-  // .background { animation: moveBackground 10s infinite linear; }
-  // .foreground { animation: moveForeground 6s infinite linear; }
-  // .character { animation: bodyBounce 0.5s infinite ease-in-out; }
+  .background { animation: moveBackground 10s infinite linear; }
+  .foreground { animation: moveForeground 6s infinite linear; }
+  .character { animation: bodyBounce 0.5s infinite ease-in-out; }
 
-  // .upper-arm, .forearm, .thigh, .shin { 
-  //   transform-origin: center; 
-  // }
+  .upper-arm, .forearm, .thigh, .shin { 
+    transform-origin: center; 
+  }
 
-  // .upper-arm { animation: upperArmSwing 1s infinite ease-in-out alternate; }
-  // .forearm { animation: forearmSwing 1s infinite ease-in-out alternate; }
-  // .thigh { animation: thighMove 1s infinite ease-in-out alternate; }
-  // .shin { animation: shinMove 1s infinite ease-in-out alternate; }
+  .upper-arm { animation: upperArmSwing 1s infinite ease-in-out alternate; }
+  .forearm { animation: forearmSwing 1s infinite ease-in-out alternate; }
+  .thigh { animation: thighMove 1s infinite ease-in-out alternate; }
+  .shin { animation: shinMove 1s infinite ease-in-out alternate; }
 
-  // @keyframes moveBackground {
-  //   0% { transform: translateX(0); }
-  //   100% { transform: translateX(-800px); }
-  // }
-  // @keyframes moveForeground {
-  //   0% { transform: translateX(0); }
-  //   100% { transform: translateX(-400px); }
-  // }
+  @keyframes moveBackground {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-800px); }
+  }
+  @keyframes moveForeground {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-400px); }
+  }
 
-  // @keyframes bodyBounce {
-  //   0% { transform: translateY(0); }
-  //   50% { transform: translateY(-5px); }
-  //   100% { transform: translateY(0); }
-  // }
+  @keyframes bodyBounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+  }
 
-  // @keyframes upperArmSwing {
-  //   0% { transform: rotate(-30deg); }
-  //   100% { transform: rotate(30deg); }
-  // }
-  // @keyframes forearmSwing {
-  //   0% { transform: rotate(15deg); }
-  //   100% { transform: rotate(-15deg); }
-  // }
-  // @keyframes thighMove {
-  //   0% { transform: rotate(25deg); }
-  //   100% { transform: rotate(-50deg); }
-  // }
-  // @keyframes shinMove {
-  //   0% { transform: rotate(30deg); }
-  //   100% { transform: rotate(-30deg); }
-  // }
+  @keyframes upperArmSwing {
+    0% { transform: rotate(-30deg); }
+    100% { transform: rotate(30deg); }
+  }
+  @keyframes forearmSwing {
+    0% { transform: rotate(15deg); }
+    100% { transform: rotate(-15deg); }
+  }
+  @keyframes thighMove {
+    0% { transform: rotate(25deg); }
+    100% { transform: rotate(-50deg); }
+  }
+  @keyframes shinMove {
+    0% { transform: rotate(30deg); }
+    100% { transform: rotate(-30deg); }
+  }
 
 .button-icon{
   padding: 5px;

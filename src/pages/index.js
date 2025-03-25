@@ -1,4 +1,5 @@
 // pages/index.js
+import Navbar from '@/components/Header/Navbar/Navbar';
 import Header from '../components/Header/Header';
 import Main from '../components/Main/Main';
 
@@ -7,14 +8,18 @@ import Main from '../components/Main/Main';
 export default function Home() {
   return (
     <div className='home'>
+         <header class="navbar">
+        <Navbar/>
+    </header>
+
       <Header/>
-        <div className='home-desc green'>
-          <h1 style={{display:"none"}}>Welcome to Sociolite</h1> <h2>Tools & Games for Social Growth.</h2>
-          <p className=''>Struggling to speak up? Stuck in awkward moments? Unsure how to navigate social situations? Sociolite helps you ditch the cringe and talk with confidence—through games, smart tools, and real-world practice. 
-            No fluff, just social skills that actually work.</p>
-        </div>
-        <Main/>
-        {/* <svg viewBox="0 0 800 250" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+      <div className='home-desc green'>
+        <h1 style={{display:"none"}}>Welcome to Sociolite</h1> <h2>Tools & Games for Social Growth.</h2>
+        <p className=''>Struggling to speak up? Stuck in awkward moments? Unsure how to navigate social situations? Sociolite helps you ditch the cringe and talk with confidence—through games, smart tools, and real-world practice. 
+          No fluff, just social skills that actually work.</p>
+      </div>
+      <Main/>
+        <svg viewBox="0 0 800 250" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
        
   <g class="background">
     <rect width="1600" height="250" fill="#87CEEB" /> 
@@ -55,7 +60,7 @@ export default function Home() {
       </g>
     </g>
   </g>
-        </svg> */}
+        </svg>
     </div>
   );
 }

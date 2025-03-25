@@ -17,7 +17,7 @@ export default async function handler(req, res) {
       await db.collection("emails").insertOne({ email });
       return res.status(201).json({ message: "Subscribed successfully!" });
     } catch (error) {
-      return res.status(500).json({ error: "Email subscription failed", details: error.message });
+      return res.status(500).json({ error });
     }
   }
 
