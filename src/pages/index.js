@@ -19,7 +19,7 @@ export default function Home() {
           No fluff, just social skills that actually work.</p>
       </div>
       <Main/>
-        <svg viewBox="0 0 800 250" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+        {/* <svg viewBox="0 0 800 250" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
        
   <g class="background">
     <rect width="1600" height="250" fill="#87CEEB" /> 
@@ -60,7 +60,7 @@ export default function Home() {
       </g>
     </g>
   </g>
-        </svg>
+        </svg> */}
     </div>
   );
 }
