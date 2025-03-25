@@ -1,6 +1,7 @@
 import { connectToDB } from "../../lib/mongodb";
 
 export default async function handler(req, res) {
+  let err = null;
   if (req.method === "POST") {
     const { email } = req.body;
 
@@ -17,10 +18,11 @@ export default async function handler(req, res) {
       await db.collection("emails").insertOne({ email });
       return res.status(201).json({ message: "Subscribed successfully!" });
     } catch (error) {
+      err = error
       return res.status(500).json({ error });
     }
   }
 
   res.setHeader("Allow", ["POST"]);
-  res.status(405).end(`Method ${req.method} Not Allowed`);
+  res.status(405).end(`Method ${req.method} Not Allowed`).json({err});
 }
