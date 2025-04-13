@@ -1,0 +1,52 @@
+
+@import '../../styles/mixins.scss';
+
+.about-intro {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; // Full screen height
+    display: flex;
+    align-items: center; // Keeps it vertically aligned
+    padding: 50px;
+
+    .background-image {
+        z-index: -1; // Ensures image stays behind text
+    }
+
+    h1 {
+        background-color: #ffcf56;
+        border-radius: 10px;
+
+        left: 7%; // Pushes it slightly to the left for hamburger visibility
+
+        top: 160px;
+        // bottom: 100px;
+        
+
+        color: green;
+        padding: 20px;
+        border-radius: 10px;
+        width: 50%;
+        @include respond-to('sm') {
+            width: 80%;
+            padding: 10px;
+        }
+        @include respond-to('md') {
+            width: 70%;
+            padding: 10px;
+        }
+        position: absolute;
+    }
+}
+.static-page{
+    height: 100vh;
+    background-color: #a27c1b;
+    z-index: -1;
+    position: relative;
+    color: #0a4e31
+}
+.quote-user{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}

@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./Navbar.module.scss"; // Import SCSS module
 import { useState, useEffect } from "react";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa"; // Import icons
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,17 +41,20 @@ export default function Navbar() {
 
           {/* Hamburger (inside background) */}
           <div
-            className={styles.hamburger}
-            onClick={() => setIsOpen((prev) => !prev)}
-          >
-            ☰
-          </div>
+  className={`${styles.hamburger} ${isOpen ? styles.open : ""}`}
+  onClick={() => setIsOpen((prev) => !prev)}
+>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
         </div>
 
         {/* Desktop Navigation */}
         <ul className={styles.navLinks}>
           <li>
-            <a href="#about">About</a>
+            <Link href="/about">About</Link>
+
           </li>
           <li>
             <a href="#services">Services</a>
@@ -62,13 +66,13 @@ export default function Navbar() {
 
         {/* Desktop Social Icons (Hidden on Scroll) */}
         <div className={`${styles.socialIcons} ${isScrolled ? styles.hidden : ""}`}>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/profile.php?id=61574677020760" target="_blank" rel="noopener noreferrer">
             <FaFacebook />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <FaTwitter />
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          </a> */}
+          <a href="https://www.instagram.com/sociolite.co" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </a>
         </div>
@@ -82,13 +86,13 @@ export default function Navbar() {
 
         {/* Mobile Social Icons */}
         <div className={styles.mobileSocialIcons}>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/profile.php?id=61574677020760" target="_blank" rel="noopener noreferrer">
             <FaFacebook />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <FaTwitter />
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          </a> */}
+          <a href="https://www.instagram.com/sociolite.co" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </a>
         </div>

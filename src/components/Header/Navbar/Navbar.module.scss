@@ -23,6 +23,7 @@
   align-items: center;
   justify-content: space-between;
   background: #76adc0;
+  border: 3px solid #088bb9;
   border-radius: 41px;
   padding: 8px;
   min-width: fit-content;
@@ -72,6 +73,7 @@
 /* Social Icons */
 .socialIcons {
   margin-left: 50px;
+  margin-right: 10px;
   display: flex;
   gap: 15px;
   
@@ -99,15 +101,59 @@
   display: none;
 }
 
-/* Hamburger Menu */
 .hamburger {
   display: none;
-  font-size: 24px;
-  color: #fff8e7;
+  width: 24px; /* Reduce width */
+  height: 18px; /* Reduce overall height */
+  margin-left: 10px;
+  position: relative;
   cursor: pointer;
-  margin-left: 15px; /* Ensures spacing inside the expanding background */
   z-index: 1100;
+
+  span {
+    position: absolute;
+    width: 100%;
+    height: 3px; /* Make lines thinner */
+    background-color: #625593; /* Matches link color */
+    transition: all 0.3s ease;
+    border-radius: 2px;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 7px; /* Move closer */
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+    }
+  }
 }
+
+/* Animate into "X" when menu is open */
+.open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 
 /* Scroll Effect */
 @media (min-width: 1025px) {
@@ -160,6 +206,10 @@
     opacity: 1;
   }
 
+  @media (max-width: 768px) {  
+    top: 100px; /* Add 100px spacing for smaller screens */
+  }
+
   a {
     color: #625593;
     font-size: 20px;
@@ -171,32 +221,8 @@
       color: #4c3b87;
     }
   }
-
-  /* Mobile Social Icons */
-  .mobileSocialIcons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
-
-    a {
-      color: #625593;
-      font-size: 24px;
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: #4c3b87;
-      }
-
-      /* Ensure SVG icons match the text color */
-      svg {
-        width: 24px;
-        height: 24px;
-        fill: currentColor;
-      }
-    }
-  }
 }
+
 
 
 /* Mobile Social Icons */
@@ -207,7 +233,7 @@
   margin-top: 10px;
 
   a {
-    color: #fff8e7;
+    // color: #fff8e7;
     font-size: 24px;
 
     svg {
