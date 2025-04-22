@@ -30,6 +30,7 @@ export default function Navbar() {
         {/* Expanding Background for Logo + Hamburger */}
         <div className={`${styles.logoContainer} ${isOpen ? styles.isOpen : ""}`}>
           <div className={styles.logo}>
+            <Link href={"/"}>
             <Image
               src="/static/sociolite.svg"
               alt="Logo"
@@ -37,6 +38,8 @@ export default function Navbar() {
               height={0}
               style={{ height: "auto" }}
             />
+            </Link>
+           
           </div>
 
           {/* Hamburger (inside background) */}

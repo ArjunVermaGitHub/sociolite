@@ -57,38 +57,40 @@ export default function AboutIntro() {
       />
 
       {/* Text Content */}
-      <h1>Conquering fears & building social confidence through structured learning</h1>
-    </div>
-    <div className='home page-container' style={{height:'500px'}}>
-      <h1 className='green'>
-        We teach dating, etiquette, public speaking through smart tech products.
-        You bring the courage. We’ll guide the rest.
-      </h1>
-      We’re Sociolite.
-    </div>
-    <div ref={divRef} className={
-      styles['static-page'] + 
-      ' page-container'
-    }
+        <h1>Conquering fears & building social confidence through structured learning</h1>
+      </div>
+      <div className='home page-container' style={{height:'500px'}}>
+        <h1 className='green'>
+          We teach dating, etiquette, public speaking through smart tech products.
+          You bring the courage. We’ll guide the rest.
+        </h1>
+        We’re Sociolite.
+      </div>
+      <div ref={divRef} className={
+        styles['static-page'] + 
+        ' page-container'
+      }
 
-    >
-      {console.log(spanRef?.current?.getBoundingClientRect().height)}
-      <blockquote
-        ref={spanRef}
-        style={{
-          // transform: `translateY(${scrollY}px)`,
-          position: finalPosition,
-          // top: 0,
-          bottom: 40,
-          zIndex: -2,
-        }}
-      >“I learnt a lot of things via Sociolite. My dreams were realized thanks to your program.”<br></br>
-      <p className={styles['quote-user']}>-Aman Thapar, startup founder</p></blockquote>
-    </div>
-    <div
-    style={{height:'500px',backgroundColor:'red'}}>
-      NOW THIS DIV HAS SOME CRAZY RANDOM TEXT
-    </div>
+      >
+        {console.log(spanRef?.current?.getBoundingClientRect().height)}
+        <blockquote
+          ref={spanRef}
+          style={{
+            // transform: `translateY(${scrollY}px)`,
+            position: finalPosition,
+            // top: 0,
+            bottom: 40,
+            zIndex: -2,
+          }}
+        >
+          “I learnt a lot of things via Sociolite. My dreams were realized thanks to your program.”<br></br>
+          <p className={styles['quote-user']}>-Ankur Thakur, startup founder</p>
+        </blockquote>
+      </div>
+      <div
+      style={{height:'500px',backgroundColor:'red'}}>
+        NOW THIS DIV HAS SOME CRAZY RANDOM TEXT
+      </div>
     </>
    
   );
